@@ -12,6 +12,9 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        //
+        'api/*', // Exclude all API routes
+        // Add specific API routes if needed, for example:
+        'api/tasks'
+        // 'api/users/*',
     ];
 }

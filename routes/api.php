@@ -1,7 +1,9 @@
 <?php
-
+namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\Task;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::apiResource('/tasks', 'TaskController');
+Route::apiResource('/tasks', TaskController::class);
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
